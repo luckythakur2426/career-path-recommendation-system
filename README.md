@@ -30,3 +30,16 @@ An end-to-end Machine Learning and NLP-based application that recommends optimal
 ├── requirements.txt         # Project dependencies
 ├── Report.docx              # Project documentation report
 └── Ppt.pptx                 # Project presentation deck
+
+📊 Dataset Highlights
+Total Records: 10,000 students
+
+Key Features:
+
+Academic: Education Level (B.Tech, MCA, M.Tech, B.Sc, BCA, Diploma), Branch (CSE, AIML, ECE, EE, IT, ME), CGPA
+
+Demographics & Preferences: Age, Preferred_Work_Mode (Onsite, Remote, Hybrid)
+
+Text Features: Comma-separated Skills (e.g., Python, SQL, AWS, Docker, React), Domain Interest
+
+Target Classes (13 Roles): Frontend Developer, Full Stack Developer, Backend Developer, Data Scientist, ML Engineer, DevOps Engineer, Cloud Engineer, Cybersecurity Analyst, Data Analyst, UI/UX Designer, QA Engineer, Business Analyst, Software Engineer.
