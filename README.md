@@ -1,54 +1,48 @@
 # 🎯 Career Path Recommendation & Prediction System
 
-An end-to-end Machine Learning and NLP-based application that recommends optimal career roles and predicts potential job pathways for students based on their technical skills, academic performance, field of study, and personal preferences.
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Streamlit-1.25%2B-FF4B4B.svg)](https://streamlit.io/)
+[![Machine Learning](https://img.shields.io/badge/Scikit--Learn-1.2%2B-F7931E.svg)](https://scikit-learn.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+An end-to-end Machine Learning and Natural Language Processing (NLP) framework designed to bridge the gap between academic qualifications and industry expectations. The system provides real-time, personalized career track recommendations and predictive insights for engineering and computer science students by evaluating technical skill sets, academic performance (CGPA), domain preferences, and degree streams.
 
 ---
 
-## 📌 Features
+## 💡 Executive Summary & Problem Statement
 
-- **Personalized Recommendation:** Utilizes Content-Based Filtering with TF-IDF Vectorization and Cosine Similarity to align candidate skill sets with industry roles.
-- **Predictive Modeling:** Employs Supervised Machine Learning (e.g., Random Forest Classifier) to predict suitable career tracks based on academic metrics (CGPA, Education level, Branch) and work preferences.
-- **Interactive Web Interface:** Built with Streamlit (`app.py`) for seamless profile input and real-time visualization of career suggestions.
-- **Data-Driven Insights:** Comprehensive Exploratory Data Analysis (EDA) uncovering key relationships between academic branch, CGPA, technical skills, and target roles.
+Navigating career choices in modern software engineering and technology domains can be overwhelming due to rapidly shifting skill demands and complex job descriptions. Traditional career advice often relies on broad generalizations rather than empirical skill alignment.
+
+This project solves that challenge by offering a two-pronged solution:
+1. **Content-Based Skill Recommendation:** Evaluates candidate technical skills and domain interests against standardized role signatures using NLP techniques (TF-IDF vectorization and Cosine Similarity).
+2. **Supervised Career Prediction:** Leverages supervised ensemble learning (Random Forest Classification) to predict suitable career tracks based on holistic profile features (Degree, Branch, CGPA, Work Mode, Age).
 
 ---
 
-## 📁 Repository Structure
+## 📌 Key System Features
+
+- **Hybrid AI Architecture:** Combines content-based filtering (NLP) and supervised classification models for balanced predictions.
+- **Interactive Web Interface:** High-performance Streamlit dashboard (`app.py`) for inputting user profiles and rendering instant career match percentages.
+- **Comprehensive EDA Pipelines:** Notebooks containing data distribution plots, skill co-occurrence analyses, and model performance benchmarks.
+- **Extensible Knowledge Base:** Configurable rules engine (`src/knowledge_base.py`) mapping technical skill aliases to primary job roles.
+
+---
+
+## 📁 Repository Directory Structure
 
 ```text
-├── data/                    # Dataset directory
-│   └── Raw dataset.xlsx     # Dataset containing 10,000 student records
-├── notebooks/               # Jupyter Notebooks for experimentation
-│   ├── Codes.ipynb          # Exploratory Data Analysis & initial logic
-│   └── EDA_and_Model_Testing.ipynb # Feature engineering & model evaluations
-├── src/                     # Source modules for core functional logic
-│   ├── recommender.py       # Recommendation engine (Cosine Similarity)
-│   ├── vectorizer.py        # TF-IDF text feature extraction
-│   ├── knowledge_base.py    # Career & domain mapping rules
-│   └── utils.py             # Data processing & helper utilities
-├── app.py                   # Streamlit web application entry point
-├── requirements.txt         # Project dependencies
-├── Report.docx              # Project documentation report
-└── Ppt.pptx                 # Project presentation deck
-
----
-
-### 📊 Dataset Highlights
-
-* **Total Records:** 10,000 students
-
----
-
-#### 🔑 Key Features
-
-* **Academic:** Education Level (`B.Tech`, `MCA`, `M.Tech`, `B.Sc`, `BCA`, `Diploma`), Branch (`CSE`, `AIML`, `ECE`, `EE`, `IT`, `ME`), `CGPA`
-* **Demographics & Preferences:** `Age`, `Preferred_Work_Mode` (*Onsite*, *Remote*, *Hybrid*)
-* **Text Features:** Comma-separated `Skills` (e.g., *Python, SQL, AWS, Docker, React*), Domain `Interest`
-
----
-
-#### 🎯 Target Classes (13 Roles)
-
-* **Roles:** *Frontend Developer, Full Stack Developer, Backend Developer, Data Scientist, ML Engineer, DevOps Engineer, Cloud Engineer, Cybersecurity Analyst, Data Analyst, UI/UX Designer, QA Engineer, Business Analyst, Software Engineer*.
-
----
+career-path-recommendation-system/
+├── data/
+│   └── Raw dataset.xlsx            # Primary dataset containing 10,000 student records
+├── notebooks/
+│   ├── Codes.ipynb                 # Initial exploratory analysis & data cleaning
+│   └── EDA_and_Model_Testing.ipynb # Feature engineering, cross-validation & model evaluation
+├── src/
+│   ├── recommender.py              # Cosine Similarity recommendation engine logic
+│   ├── vectorizer.py               # Text preprocessing and TF-IDF extraction pipeline
+│   ├── knowledge_base.py           # Domain mapping rules & skill-to-role definitions
+│   └── utils.py                    # Data validation, formatting, and helper scripts
+├── app.py                          # Main Streamlit web application entry point
+├── requirements.txt                # Dependency specifications
+├── Report.docx                     # Detailed project design and technical report
+└── Ppt.pptx                        # Presentation slide deck
